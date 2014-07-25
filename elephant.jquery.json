@@ -1,0 +1,21 @@
+{
+  "name": "Elephant",
+  "version": "1.0.0",
+  "title": "jQuery Elephant",
+  "author": {
+		"name": "Don Burks", 
+		"email": "don@donburks.com", 
+		"url": "http://www.donburks.com"
+	},
+  "licenses": [
+			{
+					"type": "MIT",
+					"url": "http://opensource.org/licenses/MIT"
+			}
+    ],
+  "dependencies": {
+		"jquery": "2.x"
+	},
+  "description": "jQuery Elephant is a form plugin for storing form data in localStorage so that it persists across page loads.",
+  "keywords": ["localStorage", "elephant", "form"]
+}

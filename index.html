@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>jQuery Elephant Test Page</title>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="jquery.elephant.js"></script>
+    <script>
+      $(function() {
+        $("#testForm").elephant();
+      });
+    </script>
+    <style>
+			* { padding: 0; border: 0; margin: 0; }
+      body { font-family: Arial, Helvetica, sans-serif; font-size: 1.2em; color: #444; padding: 0; }
+      #container { width: 910px; margin: 0 auto; padding: 20px; background-color: #eee; }
+			#container h3 { margin-bottom: 20px; }
+      .formBox { min-height: 60px; padding:8px 0; }
+			.formBox input[type="text"], .formBox input[type="email"], .formBox select { width: 250px; height: 35px; line-height: 35px; padding:1px 5px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; font-size: 0.9em; border: 1px solid #999; }
+			.formBox textarea { line-height: 35px; font-size: 0.9em; padding: 1px 5px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border: 1px solid #999; }
+			.formBox input[type="radio"] { margin-left: 5px; }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+			<h3>Enter some information in the form. Feel free to close this window (I'd copy the URL first if I were you), and you will still see your information populated in the form.</h3>
+      <form id="testForm">
+        <div class="formBox">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name...">
+        </div>
+				<div class="formBox">
+					<label for="gender">Gender:</label><br>
+					<input type="radio" name="gender" value="male"> Male
+					<input type="radio" name="gender" value="female"> Female
+					<input type="radio" name="gender" value="other"> Other
+				</div>
+        <div class="formBox">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your e-mail address...">
+        </div>
+				<div class="formBox">
+					<label for="pet">Favourite pet:</label>
+					<select id="pet" name="pet">
+						<option value="" selected>Select a pet...</option>
+						<option value="dog">Dogs</option>
+						<option value="cat">Cats</option>
+						<option value="fish">Fish</option>
+						<option value="lizards">Lizards</option>
+						<option value="snakes">Snakes</option>
+					</select>
+				</div>
+        <div class="formBox">
+          <label for="days">Favourite days of the week:</label><br>
+          <input type="checkbox" name="days[]" value="1"> Sunday
+          <input type="checkbox" name="days[]" value="2"> Monday
+          <input type="checkbox" name="days[]" value="3"> Tuesday
+          <input type="checkbox" name="days[]" value="4"> Wednesday
+          <input type="checkbox" name="days[]" value="5"> Thursday
+          <input type="checkbox" name="days[]" value="6"> Friday
+          <input type="checkbox" name="days[]" value="7"> Saturday          
+        </div>
+				<div class="formBox">
+					<label for="memo">Enter a note here: </label><br>
+					<textarea id="memo" name="memo" rows="3" cols="80" placeholder="Notes..."></textarea>
+      </form>
+    </div>
+  </body>
+</html>
