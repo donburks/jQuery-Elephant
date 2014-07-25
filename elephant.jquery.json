@@ -1,6 +1,6 @@
 {
   "name": "elephant",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "title": "jQuery Elephant",
   "author": {
 		"name": "Don Burks", 
@@ -17,5 +17,8 @@
 		"jquery": "2.x"
 	},
   "description": "jQuery Elephant is a form plugin for storing form data in localStorage so that it persists across page loads.",
-  "keywords": ["localStorage", "elephant", "form"]
+  "keywords": ["localStorage", "elephant", "form"],
+	"homepage": "http://www.donburks.com/elephants/",
+	"demo": "http://donburks.com/demos/elephant/",
+	"download": "http://donburks.com/demos/elephant/jquery.elephant.js"
 }
