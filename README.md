@@ -19,3 +19,15 @@ In your document ready, bind to your `form` object directly:
 		$("#myForm").elephant();
 
 And that's it.
+
+## Options
+
+There is only one option that is able to be passed to the plugin. This is the `key` that will be used by the plugin to store the form data in localStorage. This gives you the ability to store data separately for each form.
+
+Example:
+
+		$("#myForm").elephant({key: 'form1'});
+
+		$("#myOtherForm").elephant({key: 'form2'});
+
+

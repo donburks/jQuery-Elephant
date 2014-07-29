@@ -1,20 +1,25 @@
 /*************************************
  ** jQuery Elephant - localStorage  **
  ** plugin for form persistance     **
- **                          v1.0.0 **
+ **                          v1.0.3 **
  ** by: Don Burks                   **
  **                                 **
  *************************************/
 
 ;(function(window, $, undefined) {
+		var defaults = {
+			'key': 'jquery-elephant'
+		},
+		params = {};
+
   var elephFns = {
     form: null,
     formData: {},
     save: function() {
-      localStorage.setItem('jquery-elephant', JSON.stringify(elephFns.formData)); 
+      localStorage.setItem(params.key, JSON.stringify(elephFns.formData)); 
     },
     load: function() {
-      elephFns.formData = JSON.parse(localStorage.getItem('jquery-elephant')); 
+      elephFns.formData = JSON.parse(localStorage.getItem(params.key)); 
       if (elephFns.formData) {
         $.each(Object.keys(elephFns.formData), elephFns.defaultValues);
       } else {
@@ -54,7 +59,10 @@
     } 
   };
 
-  $.fn.elephant = function() {
+  $.fn.elephant = function(val) {
+		val = val || {};
+		params = $.extend(defaults, val);
+
     elephFns.form = $(this);
     elephFns.load();
 
