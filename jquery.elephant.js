@@ -1,7 +1,7 @@
 /*************************************
  ** jQuery Elephant - localStorage  **
  ** plugin for form persistance     **
- **                          v1.0.3 **
+ **                          v1.0.4 **
  ** by: Don Burks                   **
  **                                 **
  *************************************/
